@@ -25,7 +25,7 @@ class ReducerSpec: QuickSpec {
                 
                 let nextTodos = todosReducer(todos, action: AddTodoAction(uuid: "2", text: "Use Redux", completed: nil))
                 expect(nextTodos[1].text) == "Use Redux"
-                expect(todos[0].completed) == false
+                expect(nextTodos[1].completed) == false
             }
             
             it("should handle toggleTodo") {
